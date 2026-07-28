@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tilted Tips</title>
+<style>
+  :root {
+    --pink-bg: #fdf1f7;
+    --pink-accent: #d6127a;
+    --text-dark: #2b2b2b;
+    --text-muted: #6b6b6b;
+    --button-bg: #f2e2e6;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-dark);
+    background: #ffffff;
+  }
+
+  header {
+    width: 100%;
+    background: var(--pink-bg);
+  }
+
+  header img {
+    width: 100%;
+    display: block;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 20px 40px;
+    text-align: center;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    color: var(--pink-accent);
+    font-size: 2rem;
+    margin: 0 0 40px;
+  }
+
+  .status {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 360px;
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .btn-solid {
+    background: var(--button-bg);
+    color: var(--text-dark);
+    border: 1px solid #d8c3c8;
+  }
+
+  .btn-outline {
+    background: #ffffff;
+    color: var(--pink-accent);
+    border: 1px solid var(--pink-accent);
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px 50px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  footer a {
+    color: var(--pink-accent);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <img src="assets/banner.png" alt="Tilted Tips — Keep your style, work comfortably.">
+  </header>
+
+  <main>
+    <p class="tagline">&quot;Where fashion meets technology in every keystroke&quot;</p>
+
+    <h1>Welcome</h1>
+
+    <p class="status">We are under construction. Visit us again soon!</p>
+
+    <div class="buttons">
+      <a href="#about" class="btn btn-solid">About Us</a>
+      <a href="#countdown" class="btn btn-outline">Countdown</a>
+    </div>
+  </main>
+
+  <footer>
+    Get in touch with us at <a href="mailto:admin@tiltedtips.com">admin@tiltedtips.com</a>
+  </footer>
+
+</body>
+</html>
