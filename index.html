@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tilted Tips</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <style>
   :root {
     --pink-bg: #fdf1f7;
@@ -14,6 +17,10 @@
   }
 
   * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+  }
 
   body {
     margin: 0;
@@ -101,6 +108,163 @@
     color: var(--pink-accent);
     text-decoration: none;
   }
+
+  /* --- Sections the buttons scroll to --- */
+  section {
+    scroll-margin-top: 24px; /* keeps the heading from tucking under the top edge when scrolled to */
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid #f0e4e8;
+  }
+
+  section h2 {
+    color: var(--pink-accent);
+    font-size: 1.6rem;
+    margin: 0 0 20px;
+  }
+
+  section p {
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+
+  /* --- Contact section: wider + two columns --- */
+  #contact.contact-section {
+    max-width: 1000px;
+    text-align: left;
+  }
+
+  #contact.contact-section h2 {
+    text-align: center;
+  }
+
+  .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+
+  .contact-intro {
+    flex: 1 1 300px;
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+
+  /* --- Retro desktop window card --- */
+  .win-card {
+    flex: 1 1 340px;
+    background: #fffbfd;
+    border: 2px solid #e6b9d4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 6px 6px 0 rgba(214, 18, 122, 0.12), 0 12px 28px rgba(182, 88, 145, 0.15);
+  }
+
+  .win-titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: linear-gradient(90deg, #f4a4cc, #b6a0e8);
+    font-family: "VT323", monospace;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+  }
+
+  .win-controls {
+    display: flex;
+    gap: 6px;
+  }
+
+  .win-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    display: inline-block;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  }
+
+  .win-dot.min { background: #ffdd7a; }
+  .win-dot.max { background: #8be6a0; }
+  .win-dot.close { background: #ff97ac; }
+
+  .win-body {
+    padding: 24px;
+  }
+
+  .field-group {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .field-group label {
+    display: block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: var(--pink-accent);
+    margin-bottom: 6px;
+  }
+
+  .field-group input,
+  .field-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #e8c3d6;
+    background: #fdf1f7;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+  }
+
+  .field-group textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  .field-group input:focus,
+  .field-group textarea:focus {
+    outline: 2px solid var(--pink-accent);
+    outline-offset: 1px;
+    background: #ffffff;
+  }
+
+  .send-btn {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(90deg, #ee85b8, #b6a0e8);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 rgba(214, 18, 122, 0.2);
+  }
+
+  .send-btn:hover {
+    transform: translateY(-1px);
+  }
+
+  .send-btn:active {
+    transform: translateY(1px);
+    box-shadow: 1px 1px 0 rgba(214, 18, 122, 0.2);
+  }
+
+  .form-note {
+    margin: 10px 0 0;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
 </style>
 </head>
 <body>
@@ -118,14 +282,85 @@
 
     <div class="buttons">
       <a href="#about" class="btn btn-solid">About Us</a>
-      <a href="#learn" class="btn btn-outline">Learn More</a>
-      <a href="#contact" class="btn btn-outline">Interested in us? Reach out!</a>
+      <a href="#contact" class="btn btn-outline">Collaborate with us!</a>
     </div>
   </main>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Tilted Tips is a fem-tech brand building keyboards designed for people who like to express themselves,
+      with long nails. We believe style and comfort should never be a compromise. Our mission is to create tech
+      that fits YOUR lifestyle.
+    </p>
+    <div class="buttons">
+      <a href="pre-launch/learnmore.html" class="btn btn-outline">Learn More</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+
+    <div class="contact-grid">
+      <div class="contact-intro">
+        <p>Have a question, want to collaborate on a project, contribute to our open-source repos on GitHub, ask about our products, explore a partnership, or just say hi? We'd love to hear from you! Drop us a message below.</p>
+      </div>
+
+      <div class="win-card">
+        <div class="win-titlebar">
+          <span>New Message</span>
+          <span class="win-controls">
+            <span class="win-dot min"></span>
+            <span class="win-dot max"></span>
+            <span class="win-dot close"></span>
+          </span>
+        </div>
+
+        <div class="win-body">
+          <form id="contact-form">
+            <div class="field-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="field-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="field-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="send-btn">Send Message</button>
+            <p class="form-note">This opens your email app with everything filled in.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
     Get in touch with us at <a href="mailto:admin@tiltedtips.com">admin@tiltedtips.com</a>
   </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var subject = document.getElementById('subject').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var message = document.getElementById('message').value.trim();
+
+      var body = 'From: ' + email + '\n\n' + message;
+
+      var mailtoLink = 'mailto:admin@tiltedtips.com'
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(body);
+
+      window.location.href = mailtoLink;
+    });
+  </script>
 
 </body>
 </html>
